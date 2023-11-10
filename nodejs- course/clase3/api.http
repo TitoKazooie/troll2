@@ -1,0 +1,33 @@
+### Recuperar todas las peliculas
+GET  http://localhost:1234/movies
+
+### Recuperar pelicula por id
+GET http://localhost:1234/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+
+### Recuperar peliculas por genero
+GET http://localhost:1234/movies?genre=sci-fi
+
+
+### Crear pelicula con POST
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "title": "Jamaica Bajo cero",
+    "year": 1993,
+    "director": "Francis Ford Coppola",
+    "duration": 90,
+    "poster": "https://static.wikia.nocookie.net/doblaje/images/0/00/JamaicaBajoCero.jpg/revision/latest?cb=20200615173138&path-prefix=es",
+    "genre": [
+    "Comedy",
+    "Adventure"
+  ]
+}
+
+### Actualizar una película
+PATCH http://localhost:1234/movies/cc9bff48-2a28-4a48-8737-3cbf60fafcaf
+Content-Type: application/json
+
+{
+  "poster": "https://play-lh.googleusercontent.com/O9EpUKVbUEl_d1tZ29UdTzQ6cZLw0983sG_vcn_a69j8KhVRZhHt3o1RYdYDvJQLQXCs=w240-h480-rw"
+}
